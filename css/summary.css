@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    display: flex;
+    font-family: 'Inter';
+    background-color: #F6F7F8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+main {
+    margin-top: 128px;
+    margin-bottom: 80px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    transition: 1000ms ease;
+    max-width: 1800px;
+}
+
+#asideMiddleLinkSummary {
+    background-color: #091931;
+    color: white;
+}
+
+#asideMiddleLinkSummary img {
+    filter: brightness(2);
+}
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#greetingDesktop {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    padding-left: 50px;
+}
+
+#daytimeGreetingDesktop {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+#userNameDesktop {
+    font-size: 47px;
+    font-weight: 700;
+    color: #29ABE2;
+}
+
+#desktopContainerLinkSummary {
+    background-color: #091931;
+    border-radius: 8px;
+    width: 76px;
+    height: 76px;
+    color: white;
+}
+
+#desktopContainerLinkSummary img {
+    filter: brightness(2);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+.headline {
+    font-size: 47px;
+    font-weight: 700;
+}
+
+.headlineText {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.separator {
+    width: 90px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #29ABE2;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100%);
+    margin-top: 40px;
+    gap: 30px;
+    max-width: 1200px;
+}
+
+.statsTop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.singleStatTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    padding: 30px 12px 30px 12px;
+    width: 38%;
+    transition: 0.125s ease;
+}
+
+.singleStatSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statNumber {
+    font-weight: 600;
+    font-size: 47px;
+}
+
+
+.singleStatText {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.statImg {
+    height: 40px;
+    width: 40px;
+}
+
+.statMiddle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 12px 30px 12px;
+    width: calc(100% - 20px);
+    transition: 0.125s ease;
+}
+
+.statMiddleLeftSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statMiddleLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.statMiddleSeparator {
+    height: 89px;
+    width: 2px;
+    background-color: #D1D1D1;
+}
+
+#urgentTaskDate {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.statMiddleRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 13px;
+}
+
+.statsBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.singleStatBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    padding: 13px;
+    width: 22%;
+    transition: 0.125s ease;
+}
+
+.singleStatTextBottom {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.singleStatTop:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: #2A3647;
+    cursor: pointer;
+}
+
+.statMiddle:hover {
+    transform: scale(1.095);
+    color: white;
+    background-color: #2A3647;
+    cursor: pointer;
+}
+
+.singleStatBottom:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: #2A3647;
+    cursor: pointer;
+}
+
+.startAnimation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 160px);
+    background-color: #F6F7F8;
+    ;
+    margin-top: 80px;
+    transition: 1000ms ease;
+}
+
+.dnone {
+    display: none;
+}
+
+.opacityZero {
+    opacity: 0;
+}
+
+
+.opacityFull {
+    opacity: 1;
+}
+
+#daytimeGreeting {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#userName {
+    font-size: 26px;
+    font-weight: 700;
+    color: #29ABE2;
+}
+
+@media screen and (max-width: 999px) {
+    #greetingDesktop {
+        display: none
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #greetingDesktop {
+        padding-left: 80px;
+    }
+}

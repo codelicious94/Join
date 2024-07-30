@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logoBright.svg">
+    <link rel="stylesheet" href="../css/font_inter.css">
+    <link rel="stylesheet" href="../css/footer_template.css">
+    <link rel="stylesheet" href="../css/header_template.css">
+    <link rel="stylesheet" href="../css/aside_template.css">
+    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="stylesheet" href="../css/contacts_popup.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <script src="../js/includeHTML.js"></script>
+    <script src="../js/remoteStorage.js"></script>
+    <script src="../js/contacts.js"></script>
+    <script src="../js/contacts1.js"></script>
+</head>
+<body onload="initContacts()">
+    <header w3-include-html="../assets/templates/header_template.html"></header>
+    <aside w3-include-html="../assets/templates/aside_template.html"></aside>
+    <main id="content" class="contactsHTMLContainer">
+        <section id="listSection" class="listSection">
+            <div class="innerListContainer">
+                <div class="listButtonContainer">
+                    <button class="addContactButton" onclick="openAddContactPopUp()">
+                        Add new contact
+                        <img class="addNewPersonAdd" src="../assets/img/person_add.svg" alt="AddNewContact">
+                    </button>
+                </div>
+                <div class="addContactButtonMobile" onclick="openAddContactPopUp()">
+                    <img src="../assets/img/person_add.svg" alt="AddNewContact">
+                </div>
+                <div id="contactList" class="contactList">
+                </div>
+            </div>
+        </section>
+        <section id="contactDetailsSection" class="contactDetailsSection">
+            <div class="LeftPartOverview">
+                <h1>Contacts</h1>
+                <div class="LeftPartOverviewText">
+                    <p class="TextTeam">Better with a team</p>
+                    <div class="SeperatorLineContent"></div>
+                </div>
+            </div>
+            <div id="contactDetailsContent"></div>
+        </section>
+    </main>
+    <div class="userAddedTextMobile" id="userAddedTextMobile">
+        Contact successfully created
+    </div>
+    <div class="userAddedTextDesktop" id="userAddedTextDesktop">
+        Contact successfully created
+    </div>
+    <footer w3-include-html="../assets/templates/footer_template.html"></footer>   
+</body>
+</html>

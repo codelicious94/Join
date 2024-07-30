@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logoBright.svg">
+    <link rel="stylesheet" href="../css/font_inter.css">
+    <link rel="stylesheet" href="../css/footer_template.css">
+    <link rel="stylesheet" href="../css/header_template.css">
+    <link rel="stylesheet" href="../css/aside_template.css">
+    <link rel="stylesheet" href="../css/board.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <script src="../js/includeHTML.js"></script>
+    <script src="../js/board.js"></script>
+    <script src="../js/board1.js"></script>
+    <script src="../js/board2.js"></script>
+    <script src="../js/board3.js"></script>
+    <script src="../js/board_html.js"></script>
+    <script src="../js/board_render.js"></script>
+    <script src="../js/remoteStorage.js"></script>
+</head>
+
+<body class="body" onload="init()" id="body">
+    <header w3-include-html="../assets/templates/header_template.html"></header>
+    <aside w3-include-html="../assets/templates/aside_template.html"></aside>
+    <main class="main">
+        <div class="boardHead">
+            <span class="boardHeadline">Board</span>
+            <div id="boardHeadImg" onclick="addTask()"></div>
+        </div>
+        <div class="searchMobile" id="searchMobile">
+            <input id="searchMobileInput" class="searchMobileInput" type="text" placeholder="Find task"
+                onkeyup="filterTasks()" onfocus="setInputContainerBorderColor('searchMobile')"
+                onblur="resetInputContainerBorderColor('searchMobile')">
+            <div class="searchMobileSeparator"></div>
+            <img class="searchIconMobile" src="../assets/img/searchIcon.svg" alt="">
+        </div>
+        <div class="taskContainers">
+            <div class="taskContainer">
+                <div class="taskContainerHead">
+                    <span class="taskContainerHeadline">To do</span>
+                    <div class="taskContainerAddTaskImg" onclick="addTask('toDo')"></div>
+                </div>
+                <div class="taskContainerContent" id="taskContainerContentToDo" ondrop="moveTo('toDo')"
+                    ondragover="allowDrop(event)">
+                </div>
+            </div>
+            <div class="taskContainer">
+                <div class="taskContainerHead">
+                    <span class="taskContainerHeadline">In Progress</span>
+                    <div class="taskContainerAddTaskImg" onclick="addTask('inProgress')"></div>
+                </div>
+                <div class="taskContainerContent" id="taskContainerContentInProgress" ondrop="moveTo('inProgress')"
+                    ondragover="allowDrop(event)">
+                </div>
+            </div>
+            <div class="taskContainer">
+                <div class="taskContainerHead">
+                    <span class="taskContainerHeadline">Await feedback</span>
+                    <div class="taskContainerAddTaskImg" onclick="addTask('awaitingFeedback')"></div>
+                </div>
+                <div class="taskContainerContent" id="taskContainerContentAwaitFeedback"
+                    ondrop="moveTo('awaitingFeedback')" ondragover="allowDrop(event)">
+                </div>
+            </div>
+            <div class="taskContainer">
+                <div class="taskContainerHead">
+                    <span class="taskContainerHeadline">Done</span>
+                    <div class="taskContainerAddTaskImg" onclick="addTask('done')"></div>
+                </div>
+                <div class="taskContainerContent" id="taskContainerContentDone" ondrop="moveTo('done')"
+                    ondragover="allowDrop(event)">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer w3-include-html="../assets/templates/footer_template.html"></footer>
+    <div class="dialogBackground dnone" id="dialogBackground" onclick="closeSingleView(event)">
+        <div class="singleTask" id="singleTask" onclick="event.stopPropagation(), closeChoosingList()">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logoBright.svg">
+    <link rel="stylesheet" href="../css/font_inter.css">
+    <link rel="stylesheet" href="../css/signUp.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <script src="../js/signUp.js"></script>
+    <!--<script src="../js/remoteStorage.js"></script>-->
+</head>
+
+<body class="body" id="body" onload="init()">
+    <img class="logo" src="../assets/img/logoDark.svg" alt="logo">
+    <main class="main">
+        <div class="header">
+            <a href="../index.html" class="arrowLeft"><img src="../assets/img/arrowLeft.svg" alt=""></a>
+            <div class="signUpHeadline">
+                <h1>Sign Up</h1>
+                <div class="signUpSeperator"></div>
+            </div>
+        </div>
+        <form class="signUpForm" onsubmit="signUp(event)">
+            <div class="inputContainer" id="inputContainerName" style="border: 1px solid #D1D1D1;">
+                <input class="inputField" required autocomplete="name" id="signUpName" type="text" placeholder="Name"
+                    onkeyup="enableDisableButton()" onfocus="changeBordorColorName()" onblur="originalBorderColorName()"
+                    oninput="validateName()">
+                <img class="signUpFormEmoticons" src="../assets/img/person.svg" alt="">
+            </div>
+
+            <div class="inputContainer" id="inputContainerEmail" style="border: 1px solid #D1D1D1;">
+                <input class="inputField" required autocomplete="email" id="signUpEmail" type="email"
+                    placeholder="Email" onkeyup="enableDisableButton()" onfocus="changeBordorColorEmail()"
+                    onblur="originalBorderColorEmail()" oninput="validateEmail()">
+                <img class="signUpFormEmoticons" src="../assets/img/mail.svg" alt="">
+            </div>
+
+            <div class="inputContainer" onkeyup="changePasswordIcon()" id="inputContainerPassword"
+                style="border: 1px solid #D1D1D1;">
+
+                <input class="inputField" required autocomplete="new-password" id="signUpPassword" type="password"
+                    placeholder="Password" onkeyup="enableDisableButton()" onfocus="changeBordorColorPassword()"
+                    onblur="originalBorderColorPassword()" oninput="validatePassword()">
+
+                <img id="passwordIcon" class="signUpFormEmoticons" src="../assets/img/lock.svg" alt=""
+                    onclick="toggleVisibilityPasswordIcon()">
+            </div>
+
+            <div class="inputContainer" onkeyup="changeConfirmPasswordIcon()" id="inputContainerConfirmPassword"
+                style="border: 1px solid #D1D1D1;">
+                <input class="inputField" required autocomplete="new-password" id="signUpConfirmPassword"
+                    type="password" placeholder="Confirm Password" onkeyup="enableDisableButton()"
+                    onfocus="changeBordorColorConfirmPassword()" onblur="originalBorderColorConfirmPassword()">
+                <img id="confirmPasswordIcon" class="signUpFormEmoticons" src="../assets/img/lock.svg" alt=""
+                    onclick="toggleVisibilityConfirmPasswordIcon()">
+            </div>
+
+            <div id="errorMessage" style="display: none;">Your Passwords don't match. Try again.</div>
+
+            <div class="checkbox">
+                <img id="checkedImg" class="check" src="../assets/img/checked.svg" alt="" onclick="changeCheckImg()"
+                    style="display: none;">
+                <img id="checkImg" class="check" src="../assets/img/checkEmpty.svg" alt="" onclick="changeCheckImg()">
+                <span>I accept the <a href="../html/privacy_policy.html">Privacy Policy</a></span>
+            </div>
+
+            <div class="SignUpButtonContainer">
+                <button type="submit" id="signUpButton" disabled>Sign Up</button>
+            </div>
+
+        </form>
+        <div class="links">
+            <a href="../html/privacy_policy.html">Privacy Policy</a>
+            <a href="../html/legal_notice.html">Legal Notice</a>
+        </div>
+    </main>
+
+    <div id="blackBackground" class="blackBackground" style="display: none;">
+        <span id="successMessage" class="successMessage">You Signed Up successfully</span>
+    </div>
+</body>
+
+</html>

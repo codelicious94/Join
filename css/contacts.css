@@ -1,0 +1,527 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    font-family: 'Inter';
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 100px;
+    max-width: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-left: 232px;
+    margin-right: 0;
+}
+
+.d-none {
+    display: none;
+}
+
+h1 {
+    font-size: 61px;
+}
+
+.letterHeader h2 {
+    margin-left: 32px;
+}
+
+.contactDetails h3 {
+    margin: 12px 0;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.contactsHTMLContainer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.listSection {
+    flex: 1;
+    max-height: 928px;
+    max-width: 453px;
+}
+
+.contactList {
+    padding: 32px 24px 32px 24px;
+}
+
+.contactDetailsSection {
+    flex: 1;
+    background-color: #F6F7F8;
+    padding: 32px 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.innerListContainer {
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Button */
+
+.listButtonContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 456px;
+}
+
+#asideMiddleLinkContacts {
+    background-color: #091931;
+    color: white;
+}
+
+#asideMiddleLinkContacts img {
+    filter: brightness(2);
+}
+
+#desktopContainerLinkContacts {
+    background-color: #091931;
+    border-radius: 8px;
+    width: 76px;
+    height: 76px;
+    color: white;
+}
+
+#desktopContainerLinkContacts img {
+    filter: brightness(2);
+}
+
+.addNewPersonAdd {
+    padding-left: 12px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 32px;
+    padding: 12px 24px;
+    height: 78px;
+}
+
+.contactItem.selected {
+    background-color: #2A3647;
+    color: white;
+    border-radius: 8px;
+}
+
+.contactItem.selected:hover {
+    background-color: #2A3647;
+}
+
+.contactItem:hover {
+    background-color: #EEEEEE;
+    border-radius: 8px;
+}
+
+.contactDetails p {
+    margin: 0;
+    color: #007cee;
+}
+
+.shortName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.ContactDetailsContainer {
+    flex-grow: 1;
+}
+
+.ContactDetailsContainer h2 {
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.shortNameContactDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 8px;
+    margin-right: 24px;
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 120px;
+    height: 120px;
+}
+
+.initialsContactDetails {
+    font-size: 48px;
+}
+
+.contactDetailsBodyContainer h3 {
+    font-size: 20px;
+    font-weight: 400;
+    width: 207px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.contactDetailsBodyEmailContainer, 
+.contactDetailsBodyPhoneContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 15px;
+    margin: 0;
+    
+}
+
+.contactDetailsBodyEmailContainer p, 
+.contactDetailsBodyPhoneContainer p {
+    margin: 0;
+}
+
+.contactDetailsBodyEmail {
+    color: #007CEE;
+    font-weight: 400;
+    margin-bottom: 15px!important;
+    text-decoration: none;
+}
+
+
+
+.contactDetailsBodyPhone {
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.LeftPartOverview {
+    display: flex;
+    align-items: center;
+    padding-left: 55px;
+    gap: 30px;
+}
+
+.LeftPartOverviewText {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+    align-items: center;
+}
+
+.TextTeam {
+    font-size: 24px;
+}
+
+.SeperatorLineContent {
+    height: 90px;
+    width: 3px;
+    background-color: #29ABE2;
+}
+
+.EditDeleteContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.edit:hover,
+.delete:hover {
+    filter: invert(52%) sepia(91%) saturate(455%) hue-rotate(155deg) brightness(96%) contrast(84%);
+    color: var(--lightblue);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.edit, .delete {
+    display: flex;
+    gap: 12px;
+}
+
+.contactDetailsHeader {
+    display: flex;
+    align-items: center;
+}
+
+.shortNameContactDetails {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+#dynamicContactDetails {
+    padding-left: 55px;
+}
+
+#fullName {
+    background-image: url(../assets/img/person.svg);
+    background-size: 24px;
+}
+
+#mail {
+    background-image: url(../assets/img/mail.svg);
+    background-size: 20px;
+}
+
+#telNumber {
+    background-image: url(../assets/img/call.svg);
+    background-size: 16px;
+}
+
+.userAddedTextDesktop {
+    position: fixed;
+    right: -880px;
+    bottom: 200px;
+    z-index: 10;
+    background-color: #2A3647;
+    color: white;
+    font-weight: 400;
+    font-size: 17px;
+    border-radius: 20px;
+    padding: 27px;
+    transition: right 2s ease; 
+}
+
+.userAddedTextAfterDesktop {
+    right: 880px !important;
+}
+
+.userAddedTextMobile {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .LeftPartOverview {
+        align-items: start;
+        flex-direction: column;
+        padding-left: 25px;
+        gap: 0;
+    }
+    #dynamicContactDetails {
+        padding-left: 25px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .userAddedTextDesktop {
+        display: none;
+    }
+
+    .userAddedTextMobile {
+        display: block; 
+        position: fixed;
+        left: calc(50% - 144px);
+        bottom: -200px;
+        z-index: 10;
+        background-color: #2A3647;
+        color: white;
+        font-weight: 400;
+        font-size: 17px;
+        border-radius: 20px;
+        padding: 27px;
+        transition: bottom 2s ease; 
+        }
+        
+    .userAddedTextAfterMobile {
+        bottom: 200px !important;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .SeperatorLineContent {
+        height: 3px;
+        width: 90px;
+        background-color: #29ABE2;
+    }
+
+    .EditDeleteContainer {
+        display: none;
+    }
+
+    .shortNameContactDetails {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+
+    .initialsContactDetails {
+        font-size: 27px;
+    }
+
+    .ContactDetailsContainer h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .TextTeam {
+        font-size: 20px;
+    }
+
+    .LeftPartOverview {
+        flex-direction: column;
+        align-items: start;
+        padding-left: 16px;
+        gap: 0;
+    }
+
+    .LeftPartOverview h1 {
+        margin: 28px 0 0 0;
+        font-size: 47px;
+    }
+
+    .LeftPartOverviewText {
+        flex-direction: column;
+        gap: 0;
+        align-items: start;
+    }
+
+    #content {
+        padding: 0;
+    }
+
+    .innerListContainer {
+        max-height: calc(100vh - 96px - 80px);
+        padding: 0;
+    }
+
+    .contactsHTMLContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .listSection {
+        max-width: none;
+        margin-right: 0;
+        display: block;
+    }
+
+    .contactDetailsSection {
+        display: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .contactDetailsSection.active {
+        display: block;
+    }
+
+    .backButton {
+        display: block;
+    }
+
+    .contactList {
+        margin: 0 32px 0 32px;
+    }
+    
+    .closeAddContactPopUpMobile {
+        cursor: pointer;
+        height: 13.15px;
+        width: 13.15px;
+    }
+
+    #dynamicContactDetails {
+        padding-left: 16px;
+        padding-top: 21px;
+    }
+
+    #fullName {
+        background-image: url(../assets/img/person.svg);
+        background-size: 24px;
+    }
+
+    #mail {
+        background-image: url(../assets/img/mail.svg);
+        background-size: 20px;
+    }
+    
+    #telNumber {
+        background-image: url(../assets/img/call.svg);
+        background-size: 16px;
+    }
+
+    .editContact, .deleteContact {
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 500px) {
+    .contactList {
+        margin: 0 8px 0 0;
+        padding: 12px;
+    }
+
+    .contactDetails h3 {
+        font-size: 20px;
+    }
+
+    .contactDetails p {
+        font-size: 14px;
+    }
+
+    .contactDetails {
+        max-width: 120px;
+    }
+}
+
+.choosingListRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+    align-items: center;
+}
+
+.choosingListRow:hover{
+    background-color: #A8A8A8;
+    border-radius: 10px;
+    border: unset;
+    cursor: pointer;
+}
+
+.choosingListLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.choosingListUserInitials {
+    color: white;
+    font-size: 14px;
+}
+
+.choosingListUserIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    margin: 0 !important;
+}
+
+#contactsDropDown {
+    border: unset;
+    font-size: 16px;
+    width: 93%;
+}
+
+#contactsDropDown:focus {
+    outline: none;
+}

@@ -1,0 +1,27 @@
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: white;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 16px;
+    width: 2px;
+}
+
+::-webkit-scrollbar-button:end:increment {
+    background-image: url(../assets/img/scrollbarDown.svg)
+}
+
+::-webkit-scrollbar-button:start:decrement {
+   background-image: url(../assets/img/scrollbarUp.svg)
+}

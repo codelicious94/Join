@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logoBright.svg">
+    <link rel="stylesheet" href="../css/font_inter.css">
+    <link rel="stylesheet" href="../css/footer_template.css">
+    <link rel="stylesheet" href="../css/header_template.css">
+    <link rel="stylesheet" href="../css/aside_template.css">
+    <link rel="stylesheet" href="../css/summary.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <script src="../js/includeHTML.js"></script>
+    <script src="../js/summary.js"></script>
+    <script src="../js/remoteStorage.js"></script>
+</head>
+
+<body class="bodySummaryCSS" onload="initSummary()">
+    <header w3-include-html="../assets/templates/header_template.html"></header>
+    <aside w3-include-html="../assets/templates/aside_template.html"></aside>
+    <main id="main" class="dnone mainSummaryCSS">
+        <div class="header">
+            <span class="headline">Join 360</span>
+            <span class="headlineText">Key Metrics at a Glance</span>
+            <div class="separator"></div>
+        </div>
+        <div class="mainContainer">
+            <div class="stats">
+                <div class="statsTop">
+                    <div class="singleStatTop" onmouseover="changeTodoImgHover()" onmouseout="changeTodoImgNormal()"
+                        onclick="openBoardSite()">
+                        <img class="statImg" id="todoImg" src="../assets/img/todoNormal.svg" alt="">
+                        <div class="singleStatSubContainer">
+                            <div class="statNumber" id="statTodoCounter">1</div>
+                            <div class="singleStatText">To-do</div>
+                        </div>
+                    </div>
+                    <div class="singleStatTop" onmouseover="changeDoneImgHover()" onmouseout="changeDoneImgNormal()"
+                        onclick="openBoardSite()">
+                        <img class="statImg" id="doneImg" src="../assets/img/doneNormal.svg" alt="">
+                        <div class="singleStatSubContainer">
+                            <div class="statNumber" id="statDoneCounter">1</div>
+                            <div class="singleStatText">Done</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="statMiddle" onclick="openBoardSite()">
+                    <div class="statMiddleLeft">
+                        <img class="statImg" id="urgentImg" src="../assets/img/taskUrgent.svg" alt="">
+                        <div class="statMiddleLeftSubContainer">
+                            <div class="statNumber" id="statUrgentCounter">1</div>
+                            <div class="singleStatText">Urgent</div>
+                        </div>
+                    </div>
+                    <div class="statMiddleSeparator"></div>
+                    <div class="statMiddleRight">
+                        <div id="urgentTaskDate">September 16, 2025</div>
+                        <div class="singleStatText">Upcoming Deadline</div>
+                    </div>
+                </div>
+                <div class="statsBottom">
+                    <div class="singleStatBottom" onclick="openBoardSite()">
+                        <div class="statNumber" id="statTasksInBoardCounter">2</div>
+                        <div class="singleStatTextBottom">Tasks in<br>Board</div>
+                    </div>
+                    <div class="singleStatBottom" onclick="openBoardSite()">
+                        <div class="statNumber" id="statTasksInProgressCounter">6</div>
+                        <div class="singleStatTextBottom">Tasks in<br>Progress</div>
+                    </div>
+                    <div class="singleStatBottom" onclick="openBoardSite()">
+                        <div class="statNumber" id="statAwaitFeedbackCounter">8</div>
+                        <div class="singleStatTextBottom">Awaiting<br>Feedback</div>
+                    </div>
+                </div>
+            </div>
+            <div class="greeting" id="greetingDesktop">
+                <span id="daytimeGreetingDesktop"></span>
+                <span id="userNameDesktop"></span></span>
+            </div>
+        </div>
+    </main>
+    <section id="startAnimationMobile" class="startAnimation">
+        <span id="daytimeGreeting"></span>
+        <span id="userName"></span></span>
+    </section>
+    <footer w3-include-html="../assets/templates/footer_template.html"></footer>
+</body>
+
+</html>

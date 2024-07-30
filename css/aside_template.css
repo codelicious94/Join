@@ -1,0 +1,88 @@
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: #2A3647;
+    min-width: 232px;
+    z-index: 10;
+    min-height: 100vh;
+    position: fixed;
+}
+
+.asideContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.asideContainerLogo {
+    width: 100px;
+    height: 122px;
+    padding-top: 64px;
+}
+
+#asideMiddle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+.asideMiddleLink {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 53px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    gap: 8px;
+    color: #CDCDCD;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.asideMiddleLink:hover {
+    cursor: pointer;
+    background-color: #2A3D59;
+}
+
+.asideBottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.asideBottomLink {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 53px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    gap: 8px;
+    color: #CDCDCD;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.asideBottomLink:hover {
+    cursor: pointer;
+    color: rgb(41, 171, 226);
+}
+
+@media screen and (max-width: 999px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        padding-left: 16px;
+    }
+}

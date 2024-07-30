@@ -1,0 +1,165 @@
+.body {
+    margin: 0;
+    font-family: 'Inter';
+    background-color: #F6F7F8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: white;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.headerContainerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContainerLeftImg {
+    width: 32px;
+    padding-left: 16px;
+}
+
+.headerContainerRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.headerContainerRightUserIcon {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #2A3647;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    color: #29ABE2;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.headerContainerRightHelp img:hover {
+    cursor: pointer;
+    transform: scale(1.12);
+}
+
+#headerMobileMenu {
+    position: fixed;
+    top: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px 0px 20px 20px;
+    gap: 8px;
+    height: 200px;
+    background-color: #2A3647;
+    transition: 0.2s;
+}
+
+.right {
+    right: -200px;
+}
+
+.normal {
+    right: 10px;
+}
+
+#headerMobileMenu a {
+    text-decoration: none;
+    color: #CDCDCD;
+    padding: 8px 8px 8px 8px;
+    display: flex;
+    width: 130px;
+    font-size: 16px;
+    border-radius: 6px;
+
+}
+
+#headerMobileMenu div{
+    text-decoration: none;
+    color: #CDCDCD;
+    padding: 8px 8px 8px 8px;
+    display: flex;
+    width: 130px;
+    font-size: 16px;
+    border-radius: 6px;    
+}
+
+#headerMobileMenu div:hover {
+    background-color: rgba(42, 61, 89, 1);
+    cursor: pointer;
+}
+
+.headerContainerRightUserIcon:hover {
+    background-color: #e2e6ec;
+}
+
+#headerMobileMenu a:hover {
+    background-color: rgba(42, 61, 89, 1);
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        height: 96px;
+    }
+
+    .headerContainerLeftImg {
+        display: none;
+    }
+
+    .headerContainerLeft {
+        padding-left: 340px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .headerContainerRightUserIcon {
+        height: 53px;
+        width: 53px;
+        border: 3px solid #2A3647;
+
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .headerMobileMenuHelp{
+        display: none !important;
+    }
+    #headerMobileMenu {
+        top: 96px;
+        height: 158px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .headerContainerRightHelp {
+        display: none;
+    }
+
+    .headerContainerLeftKanbanText {
+        display: none;
+    }
+}

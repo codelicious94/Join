@@ -1,0 +1,54 @@
+.body{
+    margin: 0;
+    font-family: 'Inter';
+    background-color: #F6F7F8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    margin-top: 100px; 
+    margin-bottom: 80px; 
+    padding-right: 10px;
+    overflow-y: auto; 
+    flex: 1; 
+    max-width: 1800px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+ol li::marker {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mainSubContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#arrowLeft {
+    width: 20px;
+    height: 20px;
+}
+
+#arrowLeft:hover {
+    cursor: pointer;
+}
+
+#asideBottomLinkPrivacy {
+    background-color: #091931;
+    color: #CDCDCD;
+}
