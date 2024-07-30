@@ -28,7 +28,7 @@ let contacts = [];
  */
 let tasks = [];
 
-const BASE_URL = 'https://remotestoragejoin-d0140-default-rtdb.europe-west1.firebasedatabase.app/';
+const BASE_URL = 'https://remotestorage---join-default-rtdb.europe-west1.firebasedatabase.app/';
 
 /**
  * Loads users from the Firebase Realtime Database.
