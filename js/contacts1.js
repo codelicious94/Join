@@ -324,7 +324,7 @@ function openEditContactPopUp(id) {
       renderContacts();
       closeAddContactPopUp();
       renderContacts();
-      window.location.href = "contacts.html";
+      window.location.href = "../html/contacts.html";
     } catch (error) {
       console.error("Error creating contact:", error);
     }

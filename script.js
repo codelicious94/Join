@@ -5,7 +5,7 @@ let privacyPolicyAccepted = false;
 let users = [];
 let contacts = [];
 let currentUser = [];
-const BASE_URL = "https://remotestoragejoin-d0140-default-rtdb.europe-west1.firebasedatabase.app"
+const BASE_URL = "https://remotestorage---join-default-rtdb.europe-west1.firebasedatabase.app"
 const userColors = [
     '#FF7A00', '#FF5EB3', '#6E52FF', '#9327FF', '#00BEE8', '#1FD7C1', '#FF745E', '#FFA35E', '#FC71FF',
     '#FFC701', '#0038FF', '#C3FF2B', '#FFE62B', '#FF4646', '#FFBB2B',
@@ -160,10 +160,10 @@ function changeRememberImg() {
  */
 function changePasswordIcon() {
     if (!document.getElementById('loginPassword').value == '' && passwordFilled == false) {
-        document.getElementById('passwordIcon').src = '../assets/img/visibility_off.svg';
+        document.getElementById('passwordIcon').src = '../projekt_JOIN/assets/img/visibility_off.svg';
         passwordFilled = true;
     } else if (document.getElementById('loginPassword').value == '') {
-        document.getElementById('passwordIcon').src = '../assets/img/lock.svg';
+        document.getElementById('passwordIcon').src = '../projekt_JOIN/assets/img/lock.svg';
         document.getElementById("loginPassword").type = "password";
         passwordFilled = false;
     }
@@ -179,10 +179,10 @@ function changePasswordIcon() {
  */
 function toggleVisibilityPasswordIcon() {
     if (document.getElementById("loginPassword").type === "password" && passwordFilled == true) {
-        document.getElementById('passwordIcon').src = '../assets/img/visibility.svg';
+        document.getElementById('passwordIcon').src = '../projekt_JOIN/assets/img/visibility.svg';
         document.getElementById("loginPassword").type = "text";
     } else if (document.getElementById("loginPassword").type === "text" && passwordFilled == true) {
-        document.getElementById('passwordIcon').src = '../assets/img/visibility_off.svg';
+        document.getElementById('passwordIcon').src = '../projekt_JOIN/assets/img/visibility_off.svg';
         document.getElementById("loginPassword").type = "password";
     }
 }
@@ -373,7 +373,7 @@ function clearInputs() {
  * 
  */
 function directToSummary() {
-    window.location.href = '../html/summary.html';
+    window.location.href = '../projekt_JOIN/html/summary.html';
 }
 
 

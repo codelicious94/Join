@@ -42,7 +42,7 @@ async function init() {
  * @returns {void}
  */
 function addTask() {
-    window.location.href = '/html/add_task.html';
+    window.location.href = '../html/add_task.html';
 }
 
 

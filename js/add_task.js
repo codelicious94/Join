@@ -368,6 +368,6 @@ function showDialogAnimation() {
     showElement.classList.add('addTaskAfterAnimationText');
 
     setTimeout(() => {
-        showElement.classList.remove('addTaskAfterAnimationText');window.location.href = "board.html";
+        showElement.classList.remove('addTaskAfterAnimationText');window.location.href = "../html/board.html";
     }, 2000);
 }

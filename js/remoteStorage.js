@@ -164,7 +164,7 @@ function fillUserInitials() {
  */
 function logout() {
     sessionStorage.clear();
-    window.location.href = 'https://join-268.developerakademie.net/index.html';
+    window.location.href = 'https://simon-matter.developerakademie.net/projekt_JOIN/index.html';
 }
 
 /**
