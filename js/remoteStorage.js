@@ -164,7 +164,7 @@ function fillUserInitials() {
  */
 function logout() {
     sessionStorage.clear();
-    window.location.href = 'https://simon-matter.developerakademie.net/projekt_JOIN/index.html';
+    window.location.href = 'https://www.simonmatter.ch/JOIN/index.html';
 }
 
 /**
