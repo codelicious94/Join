@@ -32,7 +32,7 @@ let contacts = [];
  * Base URL for the Firebase Realtime Database.
  * @constant {string}
  */
-const BASE_URL = "https://remotestorage---join-default-rtdb.europe-west1.firebasedatabase.app/";
+const BASE_URL = "https://remotestorage---join-default-rtdb.europe-west1.firebasedatabase.app";
 
 /**
  * List of user colors.
@@ -571,5 +571,5 @@ function signUpSuccess() {
  * @returns {void}
  */
 function directToLogin() {
-    window.location.href = 'https://join-268.developerakademie.net/index.html';
+    window.location.href = 'https://www.simonmatter.ch/JOIN/index.html';
 }
