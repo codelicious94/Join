@@ -32,7 +32,7 @@ let contacts = [];
  * Base URL for the Firebase Realtime Database.
  * @constant {string}
  */
-const BASE_URL = "https://remotestorage---join-default-rtdb.europe-west1.firebasedatabase.app";
+const BASE_URL = "https://remotestorage---join-default-rtdb.europe-west1.firebasedatabase.app/";
 
 /**
  * List of user colors.
